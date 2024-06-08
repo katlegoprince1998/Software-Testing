@@ -1,0 +1,37 @@
+1. Importance of testing
+  ==> Quality Assurance
+  ==> Regression Testing
+  ==> Documentation
+  ==> Code Maintainability
+  ==> Refactoring Confidence
+  ==> Collaboration
+  ==> CI/CD
+  ==> Reduced Debugging Time
+  ==> Scalability
+  ==> Security
+
+2. Spring Test
+  ==> Spring boot provides utilities and annotations for testing applications
+  ==> Test support is provided by two modules
+    ==> spring-boot-test contains core items
+    ==> spring-boot-test-autoconfigure supports auto-configuration for tests
+    ==> spring-boot-starter-test "Starter", imports:
+      ==> Spring Boot test modules
+      ==> JUnit, Assertj, Hamcrest, and a number of useful libraries
+  => A Spring Boot application is a Spring Boot ApplicationContext
+  => Spring Boot provides a @SpringBootTest annotation when you need Spring Boot features during test
+  => JUnit 4 -> @RunWith(SpringRunner.class) to your test
+  => JUnit 5 -> No need to add the equivalent @ExtendWith(SpringExtension)
+  => Spring Boot's auto-configuration system works well for applications but can sometimes be a little too much for
+  tests.
+    => It assist in loading only the parts of the configuration that are required to test a "slice" of your application.
+    => The spring-boot-auto-configure module includes a number of annotations that can be used to automatically
+    configure such "Slices".
+    => Each slice restrict component scan to appropriate components and loads a very restricted set of auto-configuration
+    classes.
+
+3. How to write tests which store objects to DB
+   ==> Set up your test class and import necessary packages.
+   ==> Create mock objects for ProductRepository and ProductMapper.
+   ==> Initialize the ProductServiceImpl with the mocked dependencies.
+   ==>  Write test cases to verify the behavior of the createProduct method.
